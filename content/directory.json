@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Gabriel Skantze",
+    "kind": "Researcher",
+    "focus": "Conversational systems, feedback and turn-taking at KTH.",
+    "source": "skantze",
+    "exercise": "Read the Voice Activity Projection paper. Draw two speakers’ activity on one clock and mark where a silence-only baseline cannot distinguish two different future turns."
+  },
+  {
+    "name": "Hema A. Murthy",
+    "kind": "Researcher",
+    "focus": "Signal processing and synthesis for Indian languages at IIT Madras.",
+    "source": "murthy",
+    "exercise": "Read the Prakash–Murthy study on language-family transfer. Design a comparison that fixes target-speaker data minutes and holds out names and phonemic contrasts."
+  },
+  {
+    "name": "Shinji Watanabe",
+    "kind": "Researcher",
+    "focus": "End-to-end speech processing and reproducible speech recipes at Carnegie Mellon.",
+    "source": "watanabe",
+    "exercise": "Pair the ESPnet paper with one repository recipe. Write down the split, tokenizer and scoring command before comparing a result."
+  },
+  {
+    "name": "Simon King",
+    "kind": "Researcher",
+    "focus": "Synthetic speech perception and listening-study design at Edinburgh.",
+    "source": "rs-king",
+    "exercise": "Read the dual-task listening study with Avashna Govender. Predict the natural-speech baseline, then inspect why the authors question a single interpretation."
+  },
+  {
+    "name": "KTH Speech, Music and Hearing",
+    "kind": "Lab",
+    "focus": "Speech communication, perception and multimodal interaction.",
+    "source": "rs-tmh",
+    "exercise": "Find a turn-taking project, identify what each time-aligned channel observes and specify the perceptual cue a transcript-only baseline loses."
+  },
+  {
+    "name": "Centre for Speech Technology Research",
+    "kind": "Lab",
+    "focus": "Speech research and Blizzard Challenge listening resources at Edinburgh.",
+    "source": "rs-cstr",
+    "exercise": "Compare the test material and conditions of use for two Blizzard Challenge editions. Design a counterbalanced listening trial with an original passage."
+  },
+  {
+    "name": "Kyutai",
+    "kind": "Lab",
+    "focus": "Open research on real-time speech models including Moshi.",
+    "source": "rs-kyutai",
+    "exercise": "Read the Moshi technical report alongside its implementation. Trace one codec frame through the separate conversational streams and list the clocks a latency study needs."
+  },
+  {
+    "name": "Praat",
+    "kind": "Project",
+    "focus": "Open-source speech measurement, annotation and synthesis tools.",
+    "source": "rs-praat",
+    "exercise": "Measure the same synthetic tone at two analysis window lengths. Include the settings with a small script and describe what a wider window resolves."
+  },
+  {
+    "name": "ESPnet",
+    "kind": "Project",
+    "focus": "End-to-end speech processing with versioned recipes and scoring steps.",
+    "source": "espnet",
+    "exercise": "Choose a small example and inspect its data preparation, tokenizer and scoring stages. Prepare a normalization regression case that uses synthetic text."
+  },
+  {
+    "name": "pyannote.audio",
+    "kind": "Project",
+    "focus": "Open-source building blocks for speaker diarization.",
+    "source": "diarization",
+    "exercise": "Write a two-speaker overlap annotation and compare time scored with and without overlap. Check a pipeline’s model terms and access requirements before downloading it."
+  },
+  {
+    "name": "SpeechBrain",
+    "kind": "Project",
+    "focus": "Open-source speech recipes and components for conversational AI.",
+    "source": "rs-speechbrain",
+    "exercise": "Read the contribution guidelines and prepare a local, minimal example that exercises an edge case in a recipe or documentation snippet."
+  }
+]

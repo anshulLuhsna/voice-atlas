@@ -1,0 +1,242 @@
+[
+  {
+    "id": "rt-webrtc",
+    "title": "Media Transport and Use of RTP in WebRTC · RFC 8834",
+    "by": "C. Perkins, M. Westerlund & J. Ott",
+    "year": "2021",
+    "url": "https://www.rfc-editor.org/rfc/rfc8834.html",
+    "type": "Standard",
+    "note": "Read sections 4 and 6 for protected media, receiver feedback and the deadline tradeoff in packet repair. Use measurements for the behavior of a particular implementation.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-rtp",
+    "title": "RTP: A Transport Protocol for Real-Time Applications · RFC 3550",
+    "by": "H. Schulzrinne and colleagues",
+    "year": "2003",
+    "url": "https://www.rfc-editor.org/rfc/rfc3550.html",
+    "type": "Standard",
+    "note": "Section 6.4.1 defines interarrival jitter from differences in relative transit time. Interpret a timestamp in the payload's specified clock before converting it to a duration.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-opusclock",
+    "title": "RTP Payload Format for the Opus Speech and Audio Codec · RFC 7587",
+    "by": "J. Spittka, K. Vos & J.-M. Valin",
+    "year": "2015",
+    "url": "https://www.rfc-editor.org/rfc/rfc7587.html",
+    "type": "Standard",
+    "note": "Look up the fixed 48 kHz RTP clock in section 4.1. Use it when estimating elapsed time from Opus timestamps, even with narrower-band capture.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-websocket",
+    "title": "The WebSocket Protocol · RFC 6455",
+    "by": "I. Fette & A. Melnikov",
+    "year": "2011",
+    "url": "https://www.rfc-editor.org/rfc/rfc6455.html",
+    "type": "Standard",
+    "note": "Sections 1 and 5 separate the TCP transport from application messages and frames. The application defines audio format, timestamps, queue bounds and reconnect behavior.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-sip",
+    "title": "SIP: Session Initiation Protocol · RFC 3261",
+    "by": "J. Rosenberg and colleagues",
+    "year": "2002",
+    "url": "https://www.rfc-editor.org/rfc/rfc3261.html",
+    "type": "Standard",
+    "note": "Follow the INVITE and dialog examples to separate call signaling from media delivery. A media path requires its own negotiation and verification.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-audio",
+    "title": "WebRTC Audio Codec and Processing Requirements · RFC 7874",
+    "by": "J.-M. Valin & C. Bran",
+    "year": "2016",
+    "url": "https://www.rfc-editor.org/rfc/rfc7874.html",
+    "type": "Standard",
+    "note": "Read the echo-cancellation section before designing a speakerphone barge-in test. Its implementation guidance leaves room for different acoustic paths and devices.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-stats",
+    "title": "Identifiers for WebRTC's Statistics API",
+    "by": "W3C WebRTC Working Group",
+    "year": "2025 draft",
+    "url": "https://www.w3.org/TR/webrtc-stats/",
+    "type": "Specification",
+    "note": "The receiver-statistics definitions distinguish jitter-buffer delay, emitted samples and packet concealment. Compare interval deltas from the same stream. Browser field availability varies.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-twilio",
+    "title": "Media Streams WebSocket messages",
+    "by": "Twilio",
+    "year": "Living documentation",
+    "url": "https://www.twilio.com/docs/voice/media-streams/websocket-messages",
+    "type": "Product documentation",
+    "note": "Check start, media, mark and clear in the bidirectional protocol. A clear flushes queued audio and can release pending marks, so a mark's meaning requires context. This is one gateway's contract.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-stivers",
+    "title": "Universals and cultural variation in turn-taking in conversation",
+    "by": "Tanya Stivers and colleagues",
+    "year": "2009",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2705608/",
+    "type": "Paper",
+    "note": "Examine the distribution and causes of response timing across ten languages in question–response sequences. Ground a latency discussion in observed variation while designing a separate interaction study for narration.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-turngpt",
+    "title": "TurnGPT: A Transformer-based Language Model for Predicting Turn-taking in Spoken Dialog",
+    "by": "Erik Ekstedt & Gabriel Skantze",
+    "year": "2020",
+    "url": "https://aclanthology.org/2020.findings-emnlp.268/",
+    "type": "Paper",
+    "note": "Study how context, syntax and pragmatic completeness help a text model predict shifts. A word-based prediction leaves out cues carried by the audio.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-vap",
+    "title": "How Much Does Prosody Help Turn-taking? Investigations using Voice Activity Projection Models",
+    "by": "Erik Ekstedt & Gabriel Skantze",
+    "year": "2022",
+    "url": "https://aclanthology.org/2022.sigdial-1.51/",
+    "type": "Paper",
+    "note": "Trace the future-activity training target and follow the signal-manipulation experiments. The hypotheses concern specific conversational recordings and models.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-turnbench",
+    "title": "TurnBench: A Multi-Domain Benchmark for Turn-Taking Dynamics in Spoken Dialogue",
+    "by": "Freeman Jiang and colleagues",
+    "year": "2026 preprint",
+    "url": "https://turnbench.sesame.com/",
+    "type": "Benchmark",
+    "note": "Compare false positives, recall and timing for end-of-turn and interruption events. The hand-annotated dual-channel studio speech gives timing references. Field conditions and user satisfaction need separate tests.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-moshi",
+    "title": "Moshi: a speech-text foundation model for real-time dialogue",
+    "by": "Alexandre Défossez and colleagues",
+    "year": "2024",
+    "url": "https://arxiv.org/abs/2410.00037",
+    "type": "Paper",
+    "note": "Inspect the two audio streams and internally generated text. The architecture shows how overlap can be represented. Deployment timing depends on clocks, devices and serving load.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-webaudio",
+    "title": "Web Audio API · output timestamps",
+    "by": "W3C Audio Working Group",
+    "year": "2021",
+    "url": "https://www.w3.org/TR/webaudio-1.0/#dom-audiocontext-getoutputtimestamp",
+    "type": "Standard",
+    "note": "The output timestamp associates the audio context's presented sample with a performance-clock estimate. It supports alignment and leaves device uncertainty and listener attention to the application.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-epub",
+    "title": "EPUB 3.3 · media overlays",
+    "by": "W3C Publishing Maintenance Working Group",
+    "year": "2026",
+    "url": "https://www.w3.org/TR/epub-33/#sec-media-overlays",
+    "type": "Standard",
+    "note": "Follow the text and audio children of a parallel media-overlay element. This models the relationship between a source fragment and a timed rendition. Automatically generated alignment still needs verification.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-annotation",
+    "title": "Web Annotation Data Model · text quote and position selectors",
+    "by": "W3C Web Annotation Working Group",
+    "year": "2017",
+    "url": "https://www.w3.org/TR/annotation-model/#text-quote-selector",
+    "type": "Standard",
+    "note": "Use exact quotes with prefix and suffix context to distinguish repeated passages. Combine them with document identity and version when restoring a bookmark after edits.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-rag",
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "by": "Patrick Lewis and colleagues",
+    "year": "2020",
+    "url": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html",
+    "type": "Paper",
+    "note": "Separate retrieval of external evidence from answer generation. The paper's open-domain task motivates evidence-aware design. It does not validate grounding in a user's specific book.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-dpr",
+    "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+    "by": "Vladimir Karpukhin and colleagues",
+    "year": "2020",
+    "url": "https://aclanthology.org/2020.emnlp-main.550/",
+    "type": "Paper",
+    "note": "Follow a question and passage through separate encoders into a dot-product score. Evaluate retrieval on paraphrases and rare names using your own passages.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-context",
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "by": "Nelson F. Liu and colleagues",
+    "year": "2024",
+    "url": "https://aclanthology.org/2024.tacl-1.9/",
+    "type": "Paper",
+    "note": "Inspect the experiments that vary the position of relevant evidence. Repeat them with the actual model, chunk order and type of question instead of extrapolating a headline result.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-cite",
+    "title": "Enabling Large Language Models to Generate Text with Citations",
+    "by": "Tianyu Gao, Howard Yen, Jiatong Yu & Danqi Chen",
+    "year": "2023",
+    "url": "https://aclanthology.org/2023.emnlp-main.398/",
+    "type": "Paper",
+    "note": "Use the citation evaluation framework to separate whether supporting citations are present from whether the cited material entails the claim. Human review helps on nuanced book passages.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-injection",
+    "title": "Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+    "by": "Kai Greshake and colleagues",
+    "year": "2023",
+    "url": "https://arxiv.org/abs/2302.12173",
+    "type": "Paper",
+    "note": "Read the examples where external content tries to act as instructions. Build an attack fixture for an imported article or quoted command and enforce tool authorization outside generation.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-provenance",
+    "title": "PROV-DM: The PROV Data Model",
+    "by": "W3C Provenance Working Group",
+    "year": "2013",
+    "url": "https://www.w3.org/TR/prov-dm/",
+    "type": "Standard",
+    "note": "Borrow the concepts of entities, derivations and invalidation when designing a memory record. The standard supplies vocabulary. Retention periods and deletion implementation remain application decisions.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-longmem",
+    "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+    "by": "Di Wu and colleagues",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2410.10813",
+    "type": "Benchmark",
+    "note": "Adapt its update, temporal reasoning and abstention questions to a listener's scoped preferences. Evaluate separate voice, consent and ownership failures.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rt-locomo",
+    "title": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
+    "by": "Adyasha Maharana and colleagues",
+    "year": "2024",
+    "url": "https://aclanthology.org/2024.acl-long.747/",
+    "type": "Benchmark",
+    "note": "Study long-session construction, question answering and multimodal evidence. Distinguish success on constructed conversations from success recovering a position during real playback.",
+    "reviewed": "2026-11-07"
+  }
+]

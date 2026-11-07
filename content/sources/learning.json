@@ -1,0 +1,52 @@
+[
+  {
+    "id": "math-prob",
+    "title": "Probability and information theory",
+    "by": "Ian Goodfellow, Yoshua Bengio & Aaron Courville",
+    "year": "2016",
+    "url": "https://www.deeplearningbook.org/contents/prob.html",
+    "type": "Textbook",
+    "note": "A reference for conditional probability, information and cross-entropy. Work the fieldbook's small numerical examples before applying the notation to sequences.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "math-linear",
+    "title": "Linear algebra",
+    "by": "Ian Goodfellow, Yoshua Bengio & Aaron Courville",
+    "year": "2016",
+    "url": "https://www.deeplearningbook.org/contents/linear_algebra.html",
+    "type": "Textbook",
+    "note": "Defines vectors, matrix products and norms. Shapes can reveal a mistaken attention or adapter calculation before any weights are trained.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "augment",
+    "title": "SpecAugment",
+    "by": "Daniel S. Park and colleagues",
+    "year": "2019",
+    "url": "https://arxiv.org/abs/1904.08779",
+    "type": "Paper",
+    "note": "Masks regions in time and frequency on feature inputs. Verify that the perturbation preserves the label in your task and keep validation clean.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "whisper-api",
+    "title": "Whisper model API · Transformers 4.46.3",
+    "by": "Hugging Face contributors",
+    "year": "Versioned API",
+    "url": "https://huggingface.co/docs/transformers/v4.46.3/en/model_doc/whisper",
+    "type": "Technical guide",
+    "note": "The optional recipe targets this version's local model, processor, generation and training interfaces. Version pins do not establish that a particular hardware stack works.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "torch-random",
+    "title": "Reproducibility",
+    "by": "PyTorch contributors",
+    "year": "Living documentation",
+    "url": "https://docs.pytorch.org/docs/stable/notes/randomness.html",
+    "type": "Technical guide",
+    "note": "Seeds control selected random generators; algorithm choices, devices and library versions can still change numerical behavior.",
+    "reviewed": "2026-11-07"
+  }
+]

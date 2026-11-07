@@ -1,0 +1,35 @@
+{"id":"turn-taking","title":"Who has the floor?","part":"Interaction","level":"Advanced","minutes":24,"question":"A listener pauses after “the part where…”. Whose turn is it now?","goals":["Distinguish speech activity, endpointing and floor control","Compare a silence timer with lexical and acoustic prediction","Evaluate a turn policy against human judgments of interruption and delay"],"prereqs":["articulation","streaming-asr"],"related":["transport","interruption","evaluation"],"labs":["endpoint","latency"],"summary":"Use silence, words and prosody as evidence about when to respond and what to do during overlap.","sources":["rt-stivers","rt-turngpt","rt-vap","rt-turnbench","rt-moshi"]}
+
+A listener asks, “Could you go back to the part where … she compares the two studies?” A breath separates *where* from *she*. During the breath there is little acoustic energy. The first phrase invites a continuation. A system that immediately answers “Of course” can collide with the words that specify the request. A listener who finishes a question and leaves an identical silence expects the opposite behavior.
+
+## Three decisions with different labels
+
+A voice activity detector (VAD) estimates whether a short frame contains speech. An endpointer decides when enough of an utterance has arrived to close it for processing. A turn policy decides whether to take the floor, keep listening, offer a brief acknowledgment or yield a turn already in progress. A recognizer can finalize a clause so a downstream model can prepare privately while the listener continues. Public speech is a separate decision.
+
+Start with a mono waveform scaled to full-scale peak 1. For N samples in a frame, compute `rms = sqrt(sum(x²) / N)`. Mark the frame active when its RMS exceeds a threshold. Require several active frames for onset and a run of inactive frames for an endpoint. This prevents a single loud click or a quiet consonant from immediately toggling the detector. A fan above threshold can hold it active forever. A soft voice below threshold can vanish. A trained speech detector can improve discrimination, but knowing which frames contain speech still leaves the breath problem unsolved.
+
+At a 20 ms frame hop, 15 inactive frames give a 300 ms silence rule. If the breath lasts 380 ms, it closes the utterance about 80 ms before the next word begins. A 500 ms rule holds the breath and also adds 200 ms to every genuinely finished turn compared with 300 ms. Frame alignment, recognizer lookahead and playback scheduling can add still more delay.
+
+## What a prediction learns
+
+In a corpus of question–response sequences across ten languages, Stivers and colleagues found both a tendency to minimize gaps and overlap and variation in timing. People can begin planning before a question finishes. The observed distribution concerns those conversational settings. A fixed universal voice-agent timeout does not follow from it. [Cross-language conversation study](#source/rt-stivers)
+
+A lexical predictor can estimate a turn shift after each word from its preceding context. TurnGPT explores syntax and pragmatic completeness using dialogue text. “The part where” leaves a complement outstanding. But a streaming recognizer can revise the crucial word, and text strips away tempo, pitch and lengthening. Voice Activity Projection learns from what actually happens on two audio channels. Given the past, it predicts patterns of future speech activity for each participant over time bins. Training can derive future-activity targets from aligned channels. Prosodic manipulations allow the researchers to ask whether changing the sound while largely preserving words changes the prediction. Neither predicted activity nor a turn-marker probability specifies what a tutor *should* do. [TurnGPT](#source/rt-turngpt) · [Voice Activity Projection experiments](#source/rt-vap)
+
+Suppose validation gave a calibrated probability of 0.65 that the listener has yielded. In an illustrative one-step policy, speaking over a continuing listener costs 4 units, and waiting one more interval after a yield costs 1 unit. Expected cost of speaking is `4 × (1 − 0.65) = 1.40`; waiting costs `1 × 0.65 = 0.65`. Wait. The crossover is 0.80. These costs are choices about the experience. Real policies also consider future evidence, the cost of repeated delays and the harm of interrupting a correction. Evaluate calibration on the actual language, devices and user population before using the threshold.
+
+## Overlap changes the action
+
+Listen on both directions while narration plays. A quiet “mhm” can support the narrator's turn. A sustained “wait, which river?” often requests the floor. A cough or a fragment of loudspeaker echo can trigger the same energy detector. An explicit stop button can settle the decision immediately. For ambiguous speech, lower the output volume briefly while accumulating evidence and preserve a short, consented input buffer so the first syllable survives. Upon a confirmed interruption, cancel old output and freeze the listener's source anchor. Full-duplex systems model concurrent input and output, but the interface still needs an explicit policy for stopping audio and accepting consequential commands. Moshi gives a concrete example of modeling two speech streams on a common timeline. [Moshi architecture](#source/rt-moshi)
+
+## Exercise · test the difference
+
+Use the [endpoint lab](#lab/endpoint) to compare a short cutoff with a longer one. Identify an internal pause and a genuine trailing silence in the fixture. A short timer can cut the interior pause, while a long timer can defer the response at the real end. The experiment computes an energy-based decision on a fixed signal. To evaluate a learned predictor, preserve separate speaker channels and blind annotators to the proposed policy. Label *hold*, *yield*, *backchannel* and *attempted interruption*. Keep disagreement and acceptable-response windows rather than forcing one perfect frame.
+
+Run both policies on the same held-out speakers. Count early starts per true hold, missed interruptions per true interruption, and response-delay percentiles on correct yields. Include hesitation, overlapping speech, uneven microphones, languages and a user who prefers a slower pace. TurnBench provides a published example of measuring event accuracy together with time to detection on annotated dyadic recordings. Studio conversations supply precise timing; a listening study tests how people adapt their speech when the system repeatedly cuts them off. [TurnBench protocol](#source/rt-turnbench)
+
+## Check your reasoning
+
+**What if word recognition is perfect yet turn-taking is poor?** Two recordings can contain the same words and different pitch, duration or overlap. The decision may also depend on whether the listener was responding to narration or to another person.
+
+**Can one lower false interruptions by never speaking?** Yes. That policy fails to serve yielded turns. Report recall and latency alongside false starts and inspect examples of each. A metric with an accommodating denominator can reward a system users abandon.

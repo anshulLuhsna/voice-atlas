@@ -1,0 +1,275 @@
+{
+  "edition": "2026-11-07",
+  "chapters": [
+    {
+      "id": "acoustics",
+      "title": "A wave in the room",
+      "part": "Sound & signal",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "capture",
+      "title": "From diaphragm to samples",
+      "part": "Sound & signal",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "sampling",
+      "title": "What sampling forgets",
+      "part": "Sound & signal",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "spectrum",
+      "title": "Reading a spectrogram",
+      "part": "Sound & signal",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "codecs",
+      "title": "What a codec spends",
+      "part": "Sound & signal",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "articulation",
+      "title": "How a mouth makes meaning",
+      "part": "Speech & models",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "math",
+      "title": "The mathematics of a prediction",
+      "part": "Speech & models",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "recognition",
+      "title": "Learning an alignment",
+      "part": "Speech & models",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "streaming-asr",
+      "title": "When transcripts change",
+      "part": "Speech & models",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "synthesis",
+      "title": "Giving text a voice",
+      "part": "Speech & models",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "audio-tokens",
+      "title": "Speaking in audio tokens",
+      "part": "Speech & models",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "narration-design",
+      "title": "Designing a better reader",
+      "part": "Deep dives",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "transport",
+      "title": "Moving sound on a deadline",
+      "part": "Interaction",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "turn-taking",
+      "title": "Who has the floor?",
+      "part": "Interaction",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "interruption",
+      "title": "A bookmark for the last sound heard",
+      "part": "Interaction",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "grounding",
+      "title": "Answer from the passage",
+      "part": "Interaction",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "memory",
+      "title": "What a voice system should remember",
+      "part": "Interaction",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "evaluation",
+      "title": "Evaluating a voice experience",
+      "part": "Systems",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "qa",
+      "title": "Breaking a voice agent on purpose",
+      "part": "Systems",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "adaptation",
+      "title": "Adapting a voice model",
+      "part": "Deep dives",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "inference",
+      "title": "Serving speech against a deadline",
+      "part": "Systems",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "privacy",
+      "title": "Consent, identity and safe releases",
+      "part": "Systems",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "researchers",
+      "title": "A working map of speech research",
+      "part": "Research",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    },
+    {
+      "id": "frontiers",
+      "title": "Experiments at the edge",
+      "part": "Research",
+      "status": "complete",
+      "scope": "Authored lesson and exercise complete; see VERIFICATION.md for execution boundaries."
+    }
+  ],
+  "paths": [
+    {
+      "id": "foundations",
+      "name": "Foundations",
+      "icon": "wave",
+      "description": "Trace a pressure wave from the room to a representation a model can use.",
+      "chapters": [
+        "acoustics",
+        "capture",
+        "sampling",
+        "spectrum",
+        "codecs",
+        "math"
+      ]
+    },
+    {
+      "id": "products",
+      "name": "Voice products",
+      "icon": "layers",
+      "description": "Build a reader that can listen, answer from the page and resume in place.",
+      "chapters": [
+        "articulation",
+        "recognition",
+        "streaming-asr",
+        "synthesis",
+        "narration-design",
+        "transport",
+        "turn-taking",
+        "interruption",
+        "grounding",
+        "memory",
+        "qa",
+        "privacy"
+      ]
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "icon": "nodes",
+      "description": "Connect model objectives to papers, listening studies and falsifiable questions.",
+      "chapters": [
+        "articulation",
+        "math",
+        "recognition",
+        "synthesis",
+        "audio-tokens",
+        "turn-taking",
+        "memory",
+        "evaluation",
+        "adaptation",
+        "researchers",
+        "frontiers"
+      ]
+    },
+    {
+      "id": "inference",
+      "name": "Inference engineering",
+      "icon": "bars",
+      "description": "Budget each stage of a streaming system and test what happens under load.",
+      "chapters": [
+        "codecs",
+        "streaming-asr",
+        "audio-tokens",
+        "transport",
+        "qa",
+        "inference",
+        "privacy"
+      ]
+    }
+  ],
+  "deepDives": [
+    "narration-design",
+    "evaluation",
+    "memory",
+    "adaptation",
+    "turn-taking",
+    "researchers",
+    "qa",
+    "inference"
+  ],
+  "extensions": [
+    {
+      "topic": "Microphone arrays and spatial beamforming",
+      "status": "planned"
+    },
+    {
+      "topic": "Speech separation and permutation-invariant training",
+      "status": "planned"
+    },
+    {
+      "topic": "Consented multilingual listening study",
+      "status": "planned"
+    },
+    {
+      "topic": "Measured local inference capacity",
+      "status": "planned"
+    },
+    {
+      "topic": "Pretrained Whisper adaptation run",
+      "status": "planned"
+    }
+  ]
+}

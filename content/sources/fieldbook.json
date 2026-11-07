@@ -1,0 +1,402 @@
+[
+  {
+    "id": "phys",
+    "title": "Sound intensity and sound level",
+    "by": "OpenStax",
+    "year": "2020",
+    "url": "https://openstax.org/books/physics/pages/14-2-sound-intensity-and-sound-level",
+    "type": "Textbook",
+    "note": "Derives intensity level and relates it to hearing. Use the pressure reference separately when computing SPL.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "superposition",
+    "title": "Wave interaction",
+    "by": "OpenStax",
+    "year": "2020",
+    "url": "https://openstax.org/books/physics/pages/13-3-wave-interaction-superposition-and-interference",
+    "type": "Textbook",
+    "note": "Connect constructive and destructive superposition to the two-path room example. Ideal waves simplify a real room.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "mic",
+    "title": "Microphone techniques for recording",
+    "by": "Shure",
+    "year": "Living guide",
+    "url": "https://www.shure.com/en-US/docs/education/Microphone-Techniques-for-Recording",
+    "type": "Technical guide",
+    "note": "Read the operating-principle and directionality sections. Frequency-specific polar plots matter more than the name of the pattern.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "mems",
+    "title": "Analog and digital MEMS microphone design considerations",
+    "by": "Analog Devices",
+    "year": "Technical article",
+    "url": "https://www.analog.com/media/en/technical-documentation/technical-articles/Analog-and-Digital-MEMS-Microphone-Design-Considerations-MS-2472.pdf",
+    "type": "Technical guide",
+    "note": "Follows the transducer and signal conditioning inside a miniature microphone. Device-specific interface details vary.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sampling-guide",
+    "title": "ADC and DAC",
+    "by": "Steven W. Smith",
+    "year": "1997",
+    "url": "https://www.dspguide.com/ch3.htm",
+    "type": "Textbook",
+    "note": "Chapter 3 treats quantization, sampling and reconstruction as separate operations. Useful before experimenting with resampling.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "convolution",
+    "title": "Convolution",
+    "by": "Steven W. Smith",
+    "year": "1997",
+    "url": "https://www.dspguide.com/ch6/1.htm",
+    "type": "Textbook",
+    "note": "Build a filter output from scaled, shifted impulse responses. The model assumes a linear time-invariant system.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "fourier",
+    "title": "The discrete Fourier transform",
+    "by": "Steven W. Smith",
+    "year": "1997",
+    "url": "https://www.dspguide.com/ch8.htm",
+    "type": "Textbook",
+    "note": "Use sine and cosine correlation to understand a spectral bin before using an FFT implementation.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "praat",
+    "title": "Configuring the spectrogram",
+    "by": "Paul Boersma & David Weenink",
+    "year": "Praat manual",
+    "url": "https://www.fon.hum.uva.nl/praat/manual/Intro_3_2__Configuring_the_spectrogram.html",
+    "type": "Technical guide",
+    "note": "Connect window duration to spectral bandwidth. Its Gaussian window constants differ from the Hann-window lab.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "mel",
+    "title": "Mel-scaled spectrogram",
+    "by": "librosa contributors",
+    "year": "API reference",
+    "url": "https://librosa.org/doc/latest/generated/librosa.feature.melspectrogram.html",
+    "type": "Technical guide",
+    "note": "Shows how a power spectrum is projected onto a mel filterbank. Check centering, exponent and mel convention when reproducing features.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "opus",
+    "title": "RFC 6716 · Definition of the Opus audio codec",
+    "by": "IETF · Valin, Vos & Terriberry",
+    "year": "2012",
+    "url": "https://datatracker.ietf.org/doc/html/rfc6716",
+    "type": "Standard",
+    "note": "Read the encoder modes and frame-duration rules to distinguish speech coding, transform coding and their hybrid.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "phonemes",
+    "title": "Phonemic contrast",
+    "by": "Essentials of Linguistics, 2nd ed.",
+    "year": "Open textbook",
+    "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/11-3-phonemic-contrast/",
+    "type": "Textbook",
+    "note": "Use contrast in a language to test whether a sound distinction can change meaning. Symbols alone cannot establish contrast.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "hindi",
+    "title": "A practical guide to Hindi script",
+    "by": "Indiana University Pressbooks",
+    "year": "Open textbook",
+    "url": "https://iu.pressbooks.pub/hindiscript/chapter/5-1-discussion/",
+    "type": "Textbook",
+    "note": "Consult the consonant distinctions in the teaching material. A writing-system example does not describe all varieties or spontaneous speech.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "indic",
+    "title": "IndicVoices",
+    "by": "AI4Bharat and collaborators",
+    "year": "2024",
+    "url": "https://arxiv.org/abs/2403.01926",
+    "type": "Dataset paper",
+    "note": "Compare read, extempore and conversational collection across Indian languages. Check transcription coverage separately from total recorded hours.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "ctc",
+    "title": "Sequence modeling with CTC",
+    "by": "Awni Hannun",
+    "year": "2017",
+    "url": "https://distill.pub/2017/ctc/",
+    "type": "Research exposition",
+    "note": "Work through blank-separated repeats and the sum over alignments. The illustrations make independence assumptions visible.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rnnt",
+    "title": "Sequence transduction with recurrent neural networks",
+    "by": "Alex Graves",
+    "year": "2012",
+    "url": "https://arxiv.org/abs/1211.3711",
+    "type": "Paper",
+    "note": "Read the joint acoustic and label-history lattice. A transducer architecture still needs a bounded-lookahead encoder to stream.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "las",
+    "title": "Listen, attend and spell",
+    "by": "Chan and colleagues",
+    "year": "2015",
+    "url": "https://arxiv.org/abs/1508.01211",
+    "type": "Paper",
+    "note": "Follow the encoder, attention and autoregressive decoder as an alternative to a latent monotonic alignment.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "whisper",
+    "title": "Robust speech recognition via large-scale weak supervision",
+    "by": "Radford and colleagues",
+    "year": "2022",
+    "url": "https://arxiv.org/abs/2212.04356",
+    "type": "Paper",
+    "note": "Study multilingual weak supervision and transfer tests. The offline objective does not specify a product's partial-result commit policy.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "diarization",
+    "title": "pyannote.audio",
+    "by": "pyannote contributors",
+    "year": "Project documentation",
+    "url": "https://pyannote.github.io/pyannote-audio/",
+    "type": "Project",
+    "note": "Trace segmentation, overlap and diarization through a practical toolkit. Diarization returns local speaker labels.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "ecapa",
+    "title": "ECAPA-TDNN",
+    "by": "Desplanques, Thienpondt & Demuynck",
+    "year": "2020",
+    "url": "https://arxiv.org/abs/2005.07143",
+    "type": "Paper",
+    "note": "Examine a speaker-verification embedding network. A similarity score needs domain-specific threshold calibration.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "tacotron",
+    "title": "Natural TTS synthesis by conditioning WaveNet on mel spectrogram predictions",
+    "by": "Shen and colleagues",
+    "year": "2017",
+    "url": "https://arxiv.org/abs/1712.05884",
+    "type": "Paper",
+    "note": "Separate acoustic prediction from waveform synthesis. The evaluation is tied to this particular system and data.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "encodec",
+    "title": "High fidelity neural audio compression",
+    "by": "Défossez and colleagues",
+    "year": "2022",
+    "url": "https://arxiv.org/abs/2210.13438",
+    "type": "Paper",
+    "note": "Study the streaming encoder, residual quantization and decoder. Good reconstruction and good linguistic tokens are different objectives.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "voicebox",
+    "title": "Voicebox",
+    "by": "Le and colleagues",
+    "year": "2023",
+    "url": "https://arxiv.org/abs/2306.15687",
+    "type": "Paper",
+    "note": "A concrete conditional flow-matching speech model. Check which segments are given as context and which are generated.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "moshi",
+    "title": "Moshi · a speech-text foundation model for real-time dialogue",
+    "by": "Défossez and colleagues",
+    "year": "2024",
+    "url": "https://arxiv.org/abs/2410.00037",
+    "type": "Paper",
+    "note": "Trace two streams of discrete audio and the time-aligned text stream. Reported latency belongs to the authors' setup.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "reader-price",
+    "title": "ElevenReader plans",
+    "by": "ElevenReader",
+    "year": "Product page",
+    "url": "https://elevenreader.io/pricing",
+    "type": "Product claim",
+    "note": "Consumer import/listening allowances, playback features, download availability and billing cadence. Prices and entitlements can change by time and region.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "api-price",
+    "title": "ElevenLabs plans",
+    "by": "ElevenLabs",
+    "year": "Product page",
+    "url": "https://elevenlabs.io/pricing",
+    "type": "Product claim",
+    "note": "Separate API/creator credits from the consumer reader subscription. Character charges depend on model and plan.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "piper",
+    "title": "Piper local speech synthesis",
+    "by": "Open Home Foundation Voice",
+    "year": "Source repository",
+    "url": "https://github.com/OHF-Voice/piper1-gpl",
+    "type": "Project",
+    "note": "Inspect local inference and voice configuration. Check the engine license and each selected voice's model card separately.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "kokoro",
+    "title": "Kokoro-82M model card",
+    "by": "hexgrad",
+    "year": "2025",
+    "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+    "type": "Model card",
+    "note": "Lists model size, voice assets and language coverage for offline synthesis. Compare pronunciation with your own text rather than assuming quality from parameter count.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "lora",
+    "title": "LoRA · low-rank adaptation of large language models",
+    "by": "Hu and colleagues",
+    "year": "2021",
+    "url": "https://arxiv.org/abs/2106.09685",
+    "type": "Paper",
+    "note": "Derives a low-rank weight update. Applying it to speech modules requires a target-layer choice and separate speech evaluation.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "ft-whisper",
+    "title": "Fine-tune Whisper for multilingual ASR",
+    "by": "Sanchit Gandhi · Hugging Face",
+    "year": "2022",
+    "url": "https://huggingface.co/blog/fine-tune-whisper",
+    "type": "Training recipe",
+    "note": "A traceable reference for pairing 16 kHz waveforms with labels and evaluating WER. Use currently permitted data and record exact revisions.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "fleurs",
+    "title": "FLEURS",
+    "by": "Conneau and colleagues",
+    "year": "2022",
+    "url": "https://arxiv.org/abs/2205.12446",
+    "type": "Dataset paper",
+    "note": "Parallel read speech provides a controlled cross-language comparison. It cannot establish performance on spontaneous code-switching.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "skantze",
+    "title": "Gabriel Skantze · professional profile",
+    "by": "KTH",
+    "year": "Lab profile",
+    "url": "https://www.kth.se/profile/skantze/",
+    "type": "Professional profile",
+    "note": "Use the profile to locate conversational systems and turn-taking publications and verify authorship.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "murthy",
+    "title": "Hema A. Murthy · research",
+    "by": "IIT Madras",
+    "year": "Lab profile",
+    "url": "https://www.cse.iitm.ac.in/~hema/",
+    "type": "Professional profile",
+    "note": "A route into speech signal processing and synthesis in Indian languages, including publications and student theses.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "watanabe",
+    "title": "Shinji Watanabe · professional profile",
+    "by": "Carnegie Mellon Language Technologies Institute",
+    "year": "Lab profile",
+    "url": "https://www.lti.cs.cmu.edu/people/faculty/watanabe-shinji.html",
+    "type": "Professional profile",
+    "note": "Connect end-to-end speech research and reproducible ESPnet experiments through an institutional profile.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "espnet",
+    "title": "ESPnet speech processing toolkit",
+    "by": "ESPnet contributors",
+    "year": "Source repository",
+    "url": "https://github.com/espnet/espnet",
+    "type": "Project",
+    "note": "Use recipe manifests, stage boundaries and environment details to reproduce one component at a time.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "kyutai",
+    "title": "Moshi source implementation",
+    "by": "Kyutai",
+    "year": "Source repository",
+    "url": "https://github.com/kyutai-labs/moshi",
+    "type": "Project",
+    "note": "Trace a full-duplex speech model's codec and streaming loop. Verify model and implementation licenses and hardware separately.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "duplex",
+    "title": "Full-Duplex-Bench",
+    "by": "Lin and colleagues",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2503.04721",
+    "type": "Benchmark paper",
+    "note": "Study operational definitions of backchannels, interruption and pause handling before interpreting aggregate scores.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "overlap",
+    "title": "Full-Duplex-Bench v1.5",
+    "by": "Benchmark authors",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2507.23159",
+    "type": "Benchmark paper",
+    "note": "Uses controlled overlap scenarios to isolate conversational behaviors. Synthetic playback and a live listener can react differently.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "longmem",
+    "title": "LongMemEval",
+    "by": "Wu and colleagues",
+    "year": "2024",
+    "url": "https://arxiv.org/abs/2410.10813",
+    "type": "Benchmark paper",
+    "note": "Tests information extraction, temporal reasoning, knowledge updates and abstention across text histories. Audio provenance needs additional tests.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "vap",
+    "title": "Voice activity projection",
+    "by": "Ekstedt & Skantze",
+    "year": "2022",
+    "url": "https://arxiv.org/abs/2205.09812",
+    "type": "Paper",
+    "note": "Predicts future joint voice activity from conversational audio. A probability of future activity still needs a product action policy.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "voicebench",
+    "title": "VoiceBench",
+    "by": "Chen and colleagues",
+    "year": "2024",
+    "url": "https://arxiv.org/abs/2410.17196",
+    "type": "Benchmark paper",
+    "note": "Probe voice assistants across acoustic variation and tasks. Clip-driven tests cannot measure every interactive recovery behavior.",
+    "reviewed": "2026-11-07"
+  }
+]

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#192b23"><meta name="description" content="An interactive fieldbook for learning voice AI, from the first pressure wave to real-time speech systems.">
+<title>Signal Atlas · Study desk</title>
+<link rel="icon" href="mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script defer src="book.js"></script><script defer src="engine.js"></script><script defer src="labs.js"></script><script defer src="reader.js"></script>
+</head>
+<body>
+<a class="skip" href="#main" id="skip">Skip to content</a>
+<header class="mast"><div class="mast-inner"><a class="brand" href="#desk" aria-label="Signal Atlas study desk"><img src="mark.svg" width="35" height="35" alt=""><span>Signal Atlas</span></a>
+<nav aria-label="Main navigation"><a href="#desk" data-nav="desk">Study desk</a><a href="#library" data-nav="library">Library</a><a href="#labs" data-nav="labs">Labs</a><a href="#reference" data-nav="reference">Reference</a></nav>
+<div class="mast-actions"><button id="open-search" class="search-button" aria-label="Search fieldbook"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5"/></svg><span>Search</span><kbd>/</kbd></button><a href="#progress" class="progress-button" aria-label="Reading progress"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V9m7 11V4m7 16v-8"/></svg></a></div></div></header>
+<main id="main" class="wrap" tabindex="-1"><noscript>This interactive fieldbook uses local JavaScript. Enable it to open chapters and labs, or read the Markdown lessons in the content folder.</noscript></main>
+<footer><div class="wrap foot"><a class="smallbrand" href="#desk">Signal Atlas</a><span>A fieldbook for voice AI</span><a href="#reference">Reference shelf ↗</a></div></footer>
+<dialog id="search-dialog" aria-labelledby="search-title"><div class="dialog-head"><h2 id="search-title">Search the fieldbook</h2><button class="icon-btn" data-close="search-dialog" aria-label="Close search">×</button></div><label for="global-q" class="sr">Search chapters, labs and references</label><input id="global-q" type="search" placeholder="Try “aliasing” or “turn-taking”" autocomplete="off"><div id="global-results"></div></dialog>
+<dialog id="reset-dialog" aria-labelledby="reset-title"><div class="dialog-head"><h2 id="reset-title">Reset reading progress?</h2><button class="icon-btn" data-close="reset-dialog" aria-label="Close reset dialog">×</button></div><p>This clears completed chapters and the saved reading position in this browser.</p><div class="button-row"><button data-close="reset-dialog" class="btn soft" autofocus>Keep progress</button><button class="btn dark" id="confirm-reset">Reset progress</button></div></dialog>
+<div id="notice" role="status" class="sr"></div>
+</body></html>

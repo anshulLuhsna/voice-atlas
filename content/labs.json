@@ -1,0 +1,108 @@
+[
+  {
+    "id": "sampling",
+    "title": "Sampling & aliasing",
+    "type": "Signal experiment",
+    "icon": "dots",
+    "short": "Change the tone and the sample clock. Watch a different wave pass through the same dots.",
+    "question": "Which frequency will the samples preserve?",
+    "chapters": [
+      "acoustics",
+      "sampling",
+      "capture"
+    ],
+    "instructions": "Start at 8 kHz and choose 5,500 Hz. Look for a lower-frequency curve that shares every sample. Compare with 2,500 Hz, then double the sample rate.",
+    "expect": "At 8 kHz, 5,500 Hz and 2,500 Hz produce the same cosine samples. At 16 kHz, the 5,500 Hz tone fits below Nyquist."
+  },
+  {
+    "id": "spectrum",
+    "title": "Window into frequency",
+    "type": "Signal experiment",
+    "icon": "spectrum",
+    "short": "Compute a spectrogram from a known signal and trade timing detail for frequency detail.",
+    "question": "Can you separate two tones and locate their onset?",
+    "chapters": [
+      "spectrum",
+      "articulation",
+      "synthesis"
+    ],
+    "instructions": "Choose the tone pair. Compare 64 and 512 samples per window before trying the sweep. Read the brightest regions against the frequency and time axes.",
+    "expect": "At 8 kHz the bin spacing narrows from 125 to 15.625 Hz. Longer windows show the two tones more distinctly and spread the onset across more time."
+  },
+  {
+    "id": "endpoint",
+    "title": "Silence or end of turn?",
+    "type": "Rule simulation",
+    "icon": "endpoint",
+    "short": "Change a speech threshold and silence hold. See which pauses end a turn too early.",
+    "question": "Is the listener pausing, backchanneling or finished?",
+    "chapters": [
+      "turn-taking",
+      "streaming-asr",
+      "qa"
+    ],
+    "instructions": "Step through a fixed energy trace containing a mid-turn pause and quiet final speech. Increase the silence hold, then raise the threshold. Compare detected endpoints with the annotated end.",
+    "expect": "A short hold fires in the middle of the utterance. A high threshold misses a quiet speech segment. A longer hold improves that case but delays the true endpoint."
+  },
+  {
+    "id": "partials",
+    "title": "A transcript in motion",
+    "type": "Transcript fixture",
+    "icon": "partials",
+    "short": "Follow revisions as a scripted recognizer receives more context, then decide when to commit.",
+    "question": "When is a partial transcript safe to act on?",
+    "chapters": [
+      "recognition",
+      "streaming-asr",
+      "grounding"
+    ],
+    "instructions": "Step through ‘read back paragraph fourteen’. Compare acting on the first number with waiting for the final event. Rewind and inspect which words were revised.",
+    "expect": "The provisional ‘forty’ becomes ‘fourteen’. Waiting preserves the correct target; the extra waiting costs time. Stability within this fixture is not a universal ASR guarantee."
+  },
+  {
+    "id": "latency",
+    "title": "Time to first audio",
+    "type": "Timing model",
+    "icon": "bars",
+    "short": "Set component delays and compare the serial and overlapping critical paths.",
+    "question": "Which stage would actually move the first audible sample?",
+    "chapters": [
+      "transport",
+      "inference",
+      "codecs"
+    ],
+    "instructions": "Increase endpoint wait, then increase model lead time. Compare serial dispatch with speculative preparation. Watch which bar determines first audible output.",
+    "expect": "Serial stages sum. In overlap mode, endpoint wait and speculative model preparation start together. Only the slower branch gates synthesis; the model assumes the speculation survives."
+  },
+  {
+    "id": "interruption",
+    "title": "The unheard buffer",
+    "type": "Playback simulation",
+    "icon": "layers",
+    "short": "Generate, play, interrupt and resume an original passage. Inspect the heard cursor after every event.",
+    "question": "Which word should Murmur play after a question?",
+    "chapters": [
+      "interruption",
+      "memory",
+      "grounding",
+      "narration-design"
+    ],
+    "instructions": "Queue three words and present one. Interrupt, deliver an old callback, ask about what you heard, then resume. Inspect the document span and both cursors after every step.",
+    "expect": "Cancellation empties queued narration, preserves the heard prefix and rejects the stale generation. Resume starts with the first unheard word. The answer has a separate playback track."
+  },
+  {
+    "id": "evaluation",
+    "title": "Voice regression bench",
+    "type": "Deterministic fixtures",
+    "icon": "checks",
+    "short": "Run labeled transcript and playback fixtures through a scorer. Inspect each failure by category.",
+    "question": "Would the same release pass word accuracy and listener safety gates?",
+    "chapters": [
+      "evaluation",
+      "qa",
+      "adaptation"
+    ],
+    "instructions": "Run the baseline fixtures. Enable a stale-buffer bug and compare exact mismatches and WER. Change normalization, inspect a named-entity failure, and compare cohort counts.",
+    "expect": "The stale audio regression changes session behavior without changing WER. Number formatting moves a transcript score while the semantic target may stay the same."
+  }
+]

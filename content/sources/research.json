@@ -1,0 +1,122 @@
+[
+  {
+    "id": "rs-king",
+    "title": "Simon King · professional profile",
+    "by": "University of Edinburgh",
+    "year": "living",
+    "url": "https://www.research.ed.ac.uk/en/persons/simon-king/",
+    "type": "Profile",
+    "note": "Start with King’s interest in speech perception, then follow the publications on how listeners evaluate synthesized speech. The profile records research activity and affiliations.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rs-tmh",
+    "title": "Department for Speech, Music and Hearing",
+    "by": "KTH Royal Institute of Technology",
+    "year": "living",
+    "url": "https://www.kth.se/tmh/",
+    "type": "Lab",
+    "note": "Use the department’s speech communication research pages to trace questions about production, perception and interaction back to experiments.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rs-cstr",
+    "title": "Research at the Centre for Speech Technology Research",
+    "by": "University of Edinburgh",
+    "year": "living",
+    "url": "https://www.cstr.ed.ac.uk/research/",
+    "type": "Lab",
+    "note": "The centre’s research archive connects acoustic measurements, synthesis and evaluation. Follow project dates and use the linked papers for specific results.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rs-kyutai",
+    "title": "Kyutai · open-science AI lab",
+    "by": "Kyutai",
+    "year": "living",
+    "url": "https://kyutai.org/",
+    "type": "Lab",
+    "note": "Pair the lab’s speech demos with the papers and corresponding code. A short demo demonstrates behavior on one interaction.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rs-prakash",
+    "title": "Generic Indic Text-to-Speech Synthesisers with Rapid Adaptation in an End-to-End Framework",
+    "by": "Anusha Prakash and Hema A. Murthy",
+    "year": "2020",
+    "url": "https://www.isca-archive.org/interspeech_2020/prakash20_interspeech.html",
+    "type": "Paper",
+    "note": "Examine the within-language-family transfer design and how the authors assessed adaptation to a target language. Keep speaker identity, language membership and data quantity separate in a replication.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rs-effort",
+    "title": "Measuring the Cognitive Load of Synthetic Speech Using a Dual Task Paradigm",
+    "by": "Avashna Govender and Simon King",
+    "year": "2018",
+    "url": "https://www.isca-archive.org/interspeech_2018/govender18b_interspeech.html",
+    "type": "Paper",
+    "note": "Read the unexpected result involving natural speech before interpreting secondary-task reaction time as a pure measure of effort. The study compares several synthesizers with natural recordings.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rs-espnet-paper",
+    "title": "ESPnet · End-to-End Speech Processing Toolkit",
+    "by": "Shinji Watanabe and colleagues",
+    "year": "2018",
+    "url": "https://www.isca-archive.org/interspeech_2018/watanabe18_interspeech.html",
+    "type": "Paper",
+    "note": "Trace the recipe from data preparation to scoring. Use a matching historical recipe before comparing the paper’s results with the evolving repository.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rs-blizzard",
+    "title": "Data and tools related to the Blizzard Challenge",
+    "by": "Centre for Speech Technology Research",
+    "year": "living",
+    "url": "https://www.cstr.ed.ac.uk/projects/blizzard/",
+    "type": "Benchmark",
+    "note": "Find listening-test tools, results and audiobook datasets. Availability and reuse conditions differ by challenge year and corpus.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rs-praat",
+    "title": "Praat · doing phonetics by computer",
+    "by": "Paul Boersma and David Weenink",
+    "year": "living",
+    "url": "https://praat.org/",
+    "type": "Software",
+    "note": "Use the manual and scripting tools to extract reproducible acoustic measurements. Report window and pitch settings when comparing speakers.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rs-speechbrain",
+    "title": "Contributing to SpeechBrain",
+    "by": "SpeechBrain contributors",
+    "year": "living",
+    "url": "https://speechbrain.github.io/contributing.html",
+    "type": "Software",
+    "note": "The maintainers describe contribution types, runnable documentation and tests. A small reproducible example can be prepared locally under their conventions.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rs-atypical",
+    "title": "Automatic Speech Recognition of Conversational Speech in Individuals with Disordered Speech",
+    "by": "Jimmy Tobin and colleagues",
+    "year": "2024",
+    "url": "https://research.google/pubs/automatic-speech-recognition-of-conversational-speech-in-individuals-with-disordered-speech/",
+    "type": "Paper",
+    "note": "Read the paired read/conversational comparison across 27 participants, including personalized models. The population and tasks limit transfer to a different user or device.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "rs-personal",
+    "title": "Personalized Automatic Speech Recognition Trained on Small Disordered Speech Datasets",
+    "by": "Jimmy Tobin and Katrin Tomanek",
+    "year": "2022",
+    "url": "https://research.google/pubs/personalized-automatic-speech-recognition-trained-on-small-disordered-speech-datasets/",
+    "type": "Paper",
+    "note": "Study the relationship between per-speaker data quantity and success criteria. The authors evaluate selected scenarios and report substantial variation across speakers.",
+    "reviewed": "2026-11-07"
+  }
+]

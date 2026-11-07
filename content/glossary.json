@@ -1,0 +1,386 @@
+[
+  {
+    "id": "acoustic-pressure",
+    "term": "Acoustic pressure",
+    "definition": "The local pressure deviation from ambient air pressure, measured in pascals. Its sign changes during a sound wave.",
+    "chapter": "acoustics"
+  },
+  {
+    "id": "frequency",
+    "term": "Frequency",
+    "definition": "Cycles per second in hertz. A periodic signal at 200 Hz repeats every five milliseconds.",
+    "chapter": "acoustics"
+  },
+  {
+    "id": "phase",
+    "term": "Phase",
+    "definition": "Position within an oscillation, measured as an angle. A delay produces a different phase shift at each frequency.",
+    "chapter": "acoustics"
+  },
+  {
+    "id": "harmonic",
+    "term": "Harmonic",
+    "definition": "A component at an integer multiple of a fundamental frequency. Harmonic strengths and resonances shape a voiced sound.",
+    "chapter": "acoustics"
+  },
+  {
+    "id": "rms",
+    "term": "RMS",
+    "definition": "Root mean square. Square each value, average those squares and take a square root to measure the size of an oscillating signal.",
+    "chapter": "acoustics"
+  },
+  {
+    "id": "decibel",
+    "term": "Decibel",
+    "definition": "A logarithmic ratio. Use 10 log10 for a power ratio and 20 log10 for an amplitude ratio when power scales with amplitude squared. State the reference.",
+    "chapter": "acoustics"
+  },
+  {
+    "id": "snr",
+    "term": "Signal-to-noise ratio",
+    "definition": "The ratio of desired signal power to noise power over the same interval and bandwidth, often reported in decibels.",
+    "chapter": "acoustics"
+  },
+  {
+    "id": "reverberation",
+    "term": "Reverberation",
+    "definition": "A tail of many reflections after a source stops. It can smear a strong vowel over a weaker subsequent consonant.",
+    "chapter": "acoustics"
+  },
+  {
+    "id": "sensitivity",
+    "term": "Microphone sensitivity",
+    "definition": "Electrical output per unit acoustic input under specified conditions, such as millivolts per pascal at 1 kHz.",
+    "chapter": "capture"
+  },
+  {
+    "id": "polar-pattern",
+    "term": "Polar pattern",
+    "definition": "A microphone's relative response by arrival direction, at a particular frequency. Real patterns change with frequency.",
+    "chapter": "capture"
+  },
+  {
+    "id": "gain-staging",
+    "term": "Gain staging",
+    "definition": "Setting level through the capture chain so quiet detail clears relevant noise without overloading a later stage.",
+    "chapter": "capture"
+  },
+  {
+    "id": "clipping",
+    "term": "Clipping",
+    "definition": "Saturation when an input exceeds a stage's supported range. Reducing volume afterward cannot recover the discarded shape.",
+    "chapter": "capture"
+  },
+  {
+    "id": "pcm",
+    "term": "PCM",
+    "definition": "Pulse-code modulation. A sequence of quantized amplitudes, with a rate, number representation and channel layout.",
+    "chapter": "sampling"
+  },
+  {
+    "id": "nyquist",
+    "term": "Nyquist frequency",
+    "definition": "Half the sample rate. Signals beyond the representable band can fold into it unless removed before sampling.",
+    "chapter": "sampling"
+  },
+  {
+    "id": "aliasing",
+    "term": "Aliasing",
+    "definition": "Different continuous frequencies producing indistinguishable sample sequences. A later filter cannot identify the original from those samples alone.",
+    "chapter": "sampling"
+  },
+  {
+    "id": "quantization",
+    "term": "Quantization",
+    "definition": "Mapping a continuous or high-precision quantity to a finite set of representable values, introducing bounded error under stated conditions.",
+    "chapter": "sampling"
+  },
+  {
+    "id": "dither",
+    "term": "Dither",
+    "definition": "Controlled noise added before quantization to reduce signal-correlated error, at the cost of a higher noise floor.",
+    "chapter": "sampling"
+  },
+  {
+    "id": "resampling",
+    "term": "Resampling",
+    "definition": "Changing the sample grid by filtering and interpolation, while preserving elapsed time and respecting the new bandwidth.",
+    "chapter": "sampling"
+  },
+  {
+    "id": "convolution",
+    "term": "Convolution",
+    "definition": "A weighted sum of delayed copies. In a linear time-invariant system it combines the input with the impulse response.",
+    "chapter": "spectrum"
+  },
+  {
+    "id": "fft",
+    "term": "FFT",
+    "definition": "An efficient algorithm for the discrete Fourier transform. It computes projections onto sinusoidal components.",
+    "chapter": "spectrum"
+  },
+  {
+    "id": "stft",
+    "term": "STFT",
+    "definition": "The short-time Fourier transform. Window overlapping frames, transform each, and place their spectra along a time axis.",
+    "chapter": "spectrum"
+  },
+  {
+    "id": "window",
+    "term": "Analysis window",
+    "definition": "A weighting applied to a finite frame. Duration and shape trade temporal localization, leakage and frequency resolution.",
+    "chapter": "spectrum"
+  },
+  {
+    "id": "mel",
+    "term": "Mel filterbank",
+    "definition": "Overlapping frequency-band weights that pool spectral power into a compact representation. The exact scale and normalization are configuration choices.",
+    "chapter": "spectrum"
+  },
+  {
+    "id": "codec",
+    "term": "Codec",
+    "definition": "An encoder/decoder pair that represents audio for storage or transport. Lossy designs discard selected information.",
+    "chapter": "codecs"
+  },
+  {
+    "id": "phoneme",
+    "term": "Phoneme",
+    "definition": "A language-specific contrastive sound category. Substituting one phoneme for another can distinguish words.",
+    "chapter": "articulation"
+  },
+  {
+    "id": "formant",
+    "term": "Formant",
+    "definition": "A resonance region of the vocal tract that emphasizes a range of frequencies. Its position helps distinguish vowel qualities.",
+    "chapter": "articulation"
+  },
+  {
+    "id": "prosody",
+    "term": "Prosody",
+    "definition": "Timing, pitch movement, prominence and phrasing across speech. It carries structure and interaction cues beyond word identity.",
+    "chapter": "articulation"
+  },
+  {
+    "id": "coarticulation",
+    "term": "Coarticulation",
+    "definition": "An articulatory gesture changing under the influence of neighboring sounds. A phone's acoustics depend on context.",
+    "chapter": "articulation"
+  },
+  {
+    "id": "code-switching",
+    "term": "Code-switching",
+    "definition": "Alternation among languages or varieties within discourse or an utterance. Evaluation must account for transcription and normalization choices.",
+    "chapter": "articulation"
+  },
+  {
+    "id": "gradient",
+    "term": "Gradient",
+    "definition": "A vector of local derivatives of a loss with respect to parameters. A gradient-descent update moves in the opposite direction.",
+    "chapter": "math"
+  },
+  {
+    "id": "softmax",
+    "term": "Softmax",
+    "definition": "Exponentiate scores and normalize by their sum to produce a distribution across mutually exclusive alternatives.",
+    "chapter": "math"
+  },
+  {
+    "id": "cross-entropy",
+    "term": "Cross-entropy",
+    "definition": "An expected negative log probability under target labels. For a one-hot target it is the negative log probability of the observed class.",
+    "chapter": "math"
+  },
+  {
+    "id": "attention",
+    "term": "Attention",
+    "definition": "A weighted combination of value vectors, with weights derived from query-key compatibility and optional position masks.",
+    "chapter": "math"
+  },
+  {
+    "id": "ctc",
+    "term": "CTC",
+    "definition": "Connectionist temporal classification. It sums probabilities of frame-level paths that collapse into a target sequence after merging repeats and removing blanks.",
+    "chapter": "recognition"
+  },
+  {
+    "id": "transducer",
+    "term": "RNN transducer",
+    "definition": "A sequence model combining acoustic evidence and label history. Its alignment lattice permits time advances and label emissions.",
+    "chapter": "recognition"
+  },
+  {
+    "id": "alignment",
+    "term": "Alignment",
+    "definition": "A mapping between acoustic time and labels. A forced aligner conditions on supplied text, which may itself contain errors.",
+    "chapter": "recognition"
+  },
+  {
+    "id": "beam-search",
+    "term": "Beam search",
+    "definition": "A bounded search that retains multiple promising sequence hypotheses. Wider beams cost computation and can still prune the correct sequence.",
+    "chapter": "recognition"
+  },
+  {
+    "id": "vad",
+    "term": "Voice activity detection",
+    "definition": "A frame-level judgment about whether speech is present. The end of a conversational turn requires a separate decision.",
+    "chapter": "streaming-asr"
+  },
+  {
+    "id": "diarization",
+    "term": "Speaker diarization",
+    "definition": "Assigning local speaker labels to time spans in a recording. Overlap may require multiple active labels.",
+    "chapter": "streaming-asr"
+  },
+  {
+    "id": "verification",
+    "term": "Speaker verification",
+    "definition": "Comparing an utterance with a claimed speaker's enrollment representation using a calibrated acceptance rule.",
+    "chapter": "streaming-asr"
+  },
+  {
+    "id": "vocoder",
+    "term": "Vocoder",
+    "definition": "A system that synthesizes waveform samples from an acoustic representation or parameters. Artifacts may originate upstream of it.",
+    "chapter": "synthesis"
+  },
+  {
+    "id": "flow-matching",
+    "term": "Flow matching",
+    "definition": "Learning a velocity field along a probability path. A generator integrates that field to transform noise into a conditioned sample.",
+    "chapter": "synthesis"
+  },
+  {
+    "id": "rvq",
+    "term": "Residual vector quantization",
+    "definition": "Selecting a codebook vector, subtracting it, and quantizing the remaining residual with subsequent codebooks.",
+    "chapter": "audio-tokens"
+  },
+  {
+    "id": "jitter",
+    "term": "Jitter",
+    "definition": "Variation in packet arrival timing relative to the media clock. A jitter buffer smooths arrivals by spending playout delay.",
+    "chapter": "transport"
+  },
+  {
+    "id": "backpressure",
+    "term": "Backpressure",
+    "definition": "A bounded-queue signal or policy that slows production when a consumer falls behind. Measure an audio queue in milliseconds as well as bytes.",
+    "chapter": "transport"
+  },
+  {
+    "id": "echo-cancellation",
+    "term": "Echo cancellation",
+    "definition": "Estimating a delayed, filtered playback reference and subtracting it from capture while preserving near-end speech.",
+    "chapter": "transport"
+  },
+  {
+    "id": "endpointing",
+    "term": "Endpointing",
+    "definition": "Deciding when to close an input segment or release a response. A silence threshold and a turn-prediction policy have different evidence.",
+    "chapter": "turn-taking"
+  },
+  {
+    "id": "backchannel",
+    "term": "Backchannel",
+    "definition": "A short listener response, such as ‘mhm’, that may support the current speaker without requesting the floor.",
+    "chapter": "turn-taking"
+  },
+  {
+    "id": "full-duplex",
+    "term": "Full duplex",
+    "definition": "Simultaneous incoming and outgoing speech streams. Useful interaction additionally requires policies for overlap and interruption.",
+    "chapter": "turn-taking"
+  },
+  {
+    "id": "epoch",
+    "term": "Stream epoch",
+    "definition": "A generation identifier used to reject obsolete work after interruption or reconnection, even if a callback arrives later.",
+    "chapter": "interruption"
+  },
+  {
+    "id": "heard-anchor",
+    "term": "Heard anchor",
+    "definition": "A document position advanced by confirmed presentation of audio. A device timestamp estimates presentation and cannot prove attention.",
+    "chapter": "interruption"
+  },
+  {
+    "id": "provenance",
+    "term": "Provenance",
+    "definition": "A record of where information came from and how it was transformed, including document version and source span.",
+    "chapter": "grounding"
+  },
+  {
+    "id": "retrieval",
+    "term": "Retrieval",
+    "definition": "Selecting potentially relevant stored content for a query. Relevance alone does not establish that a claim is supported.",
+    "chapter": "grounding"
+  },
+  {
+    "id": "episodic-memory",
+    "term": "Episodic memory",
+    "definition": "Records of particular interactions with time and provenance. Updating or deleting them differs from changing a stable user preference.",
+    "chapter": "memory"
+  },
+  {
+    "id": "wer",
+    "term": "WER",
+    "definition": "Word error rate, the minimum substitutions, deletions and insertions divided by reference words under a specified normalization.",
+    "chapter": "evaluation"
+  },
+  {
+    "id": "mos",
+    "term": "MOS",
+    "definition": "Mean opinion score, averaged subjective ratings under a specified listening protocol. Listener population and confidence intervals matter.",
+    "chapter": "evaluation"
+  },
+  {
+    "id": "leakage",
+    "term": "Evaluation leakage",
+    "definition": "Information from the intended evaluation population entering training or selection, making measured generalization optimistic.",
+    "chapter": "evaluation"
+  },
+  {
+    "id": "fault-injection",
+    "term": "Fault injection",
+    "definition": "Deliberately introducing a timeout, stale event or other controlled failure to observe recovery and invariant violations.",
+    "chapter": "qa"
+  },
+  {
+    "id": "lora",
+    "term": "LoRA",
+    "definition": "Low-rank adaptation. Freeze a base matrix and learn an update factored into two smaller matrices.",
+    "chapter": "adaptation"
+  },
+  {
+    "id": "forgetting",
+    "term": "Catastrophic forgetting",
+    "definition": "Adaptation that improves new conditions while degrading previously learned behavior. Measure the original domain as well as the target.",
+    "chapter": "adaptation"
+  },
+  {
+    "id": "rtf",
+    "term": "Real-time factor",
+    "definition": "Processing seconds divided by audio seconds. It measures an audio production or processing rate separately from startup delay.",
+    "chapter": "inference"
+  },
+  {
+    "id": "kv-cache",
+    "term": "KV cache",
+    "definition": "Stored attention keys and values for past positions in an autoregressive transformer. It grows with retained context and concurrent sessions.",
+    "chapter": "inference"
+  },
+  {
+    "id": "p95",
+    "term": "95th percentile latency",
+    "definition": "A value at or below which 95 percent of the observed latency samples fall, using a stated estimation method and failure accounting.",
+    "chapter": "inference"
+  },
+  {
+    "id": "canary",
+    "term": "Canary release",
+    "definition": "Routing a bounded share of eligible traffic to a new version while monitoring predeclared release and rollback gates.",
+    "chapter": "privacy"
+  }
+]

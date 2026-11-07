@@ -1,0 +1,33 @@
+{"id":"streaming-asr","title":"When transcripts change","part":"Speech & models","level":"Intermediate","minutes":22,"question":"When may a voice agent act on a word that just appeared in a partial transcript?","goals":["Separate frame time, emission time and text stability","Keep speaker labels, timing and normalization reversible","Test contextual bias, noise and revisions at the action boundary"],"prereqs":["recognition"],"related":["turn-taking","transport","qa"],"labs":["partials","endpoint"],"summary":"Design a transcript protocol that supports revisions, overlapping speakers and safe downstream decisions.","sources":["sp-stream","whisper","rnnt","diarization","ecapa","sp-mucs"]}
+
+A listener says “find the earliest … actually, the latest train.” A recognizer can correctly emit *earliest* long before it hears the repair. There are two independent sources of change. An acoustic hypothesis can be revised when more sound arrives, and the person can revise their own intention. Stable text can faithfully represent a request that is about to change. An early search can be speculative and cancellable. Booking a ticket needs a stronger decision boundary.
+
+## Keep the clocks separate
+
+Capture 20 ms of 16 kHz mono PCM and you have 320 samples. If the encoder advances every 10 ms, those 20 ms span two frame hops, subject to the feature window and padding convention. Suppose a token requires another 80 ms of acoustic lookahead and a processing cycle can wait up to 40 ms for its next dispatch. Emitting a hypothesis from this design may add roughly 80–120 ms after its last relevant frame, before compute, transport and playback. This is a timing budget under stated assumptions. A timestamp mapped to frame 52 means approximately 520 ms into the input timeline under a 10 ms alignment convention. The word can first appear on screen much later.
+
+A streaming encoder caches left context and restricts future context. A transducer can emit new labels as audio arrives. A different design wraps a whole-window model by repeatedly decoding an overlapping buffer. A local-agreement rule commits a common prefix across consecutive hypotheses. It adds recognition work and confirmation delay and can confidently commit the same mistaken prefix twice. Whisper-Streaming describes this approach to using an offline recognizer incrementally. [Local-agreement implementation](#source/sp-stream) · [Whisper model](#source/whisper) · [Transducer lattice](#source/rnnt)
+
+## Treat revisions as replacements
+
+Send an utterance ID, monotonically increasing revision number, stable tokens, replaceable suffix and audio-time intervals. A reconnect needs a stream epoch so that an old revision cannot patch the wrong utterance. For a two-hypothesis agreement policy, compare “take the night” with “take the nine.” The exact-token common prefix is “take the.” When the next hypothesis is “take the nine fifteen,” *nine* can join that prefix under the example policy. Replacing the suffix by index avoids concatenating all three strings into a phantom sentence. A final flag closes the recognizer's revision window. A later human correction belongs in a new utterance linked to the earlier one.
+
+Preserve verbatim tokens beside normalized display text. “nine fifteen” could mean 9:15, a route identifier 915 or a pair of numbers. Punctuation is inferred and often arrives late. If the display layer adds a question mark or formats a time, store which source tokens it consumed. Store the clock origin, segment uncertainty and timestamp convention. A highlight that starts at token emission time will drift behind spoken words. Alignment precision also depends on feature hop, subsampling and whether boundaries came from forced alignment or an approximate attention alignment.
+
+## Activity, speakers and interruptions
+
+A VAD decides whether speech is present in a short window. Energy can spike for a door slam, and quiet speech can fall below a threshold. Learn a speech-sensitive detector or adjust the capture chain, then evaluate clipping of word onsets. Diarization assigns time segments to anonymous speakers, for example *speaker 0* and *speaker 1*. A single-label annotation forces one of two simultaneous speakers to disappear. Explicit multi-label intervals or separate channels can retain overlap when the task and data permit. Test short backchannels separately because a one-second error budget can hide a lost “wait.” [pyannote.audio](#source/diarization)
+
+Speaker verification compares a claimed identity with an enrollment reference. A neural embedding maps a clip to a vector. A cosine score can be thresholded using target and impostor trials recorded under expected conditions. Raising the threshold tends to reduce false accepts and increase false rejects. Replay, noise and channel mismatch can defeat a shortcut that treats a high score as identity proof. Diarization labels do not supply enrollment or authorization. [ECAPA-TDNN](#source/ecapa)
+
+## Exercise · replay the action gate
+
+Step through the [streaming transcript experiment](#lab/partials). After each update, write down what your search index would query and what an external tool would be allowed to commit. Keep the previous value so a reversible search can be cancelled. Count visible changes to the unstable suffix and record when each word first becomes stable. Expect the stable display to lag the eager one. If an earlier hypothesis triggers a tool, a corrected final transcript alone will leave the external state wrong.
+
+Repeat the reasoning with a bilingual name in a noisy room. Use one clean clip and a noise-added copy at a declared signal-to-noise ratio, plus a distinct session from another speaker. Split before augmentation so copies of the same utterance cannot cross train/test boundaries. Log missed names, spurious biased names and mistaken actions. MUCS offers evidence about particular code-switched language pairs, while the user's device and local vocabulary require their own tests. [MUCS code-switching challenge](#source/sp-mucs)
+
+## Check your reasoning
+
+**An endpoint finalized “find seven.” Can the user still mean “find seventy”?** Yes. The endpointer may have cut a pause or syllable prematurely, and the person may continue. Preserve the audio-relative interval, allow follow-up repair and require explicit confirmation for costly actions.
+
+**Why can perfect speaker labels fail to recover both transcripts in overlap?** The labels indicate that two sources were active. A single mono waveform still mixes their acoustic signals. A multi-talker recognizer, a separation method or separate capture channels must recover the competing words.

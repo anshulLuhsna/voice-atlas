@@ -1,0 +1,232 @@
+[
+  {
+    "id": "sy-sctk",
+    "title": "SCLITE scoring documentation",
+    "by": "NIST Speech Group",
+    "year": "living",
+    "url": "https://github.com/usnistgov/SCTK/blob/master/doc/sclite.htm",
+    "type": "Software",
+    "note": "Inspect reference–hypothesis alignment and counts of substitutions, deletions and insertions. Record the scoring and normalization configuration alongside a reported WER.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-p808",
+    "title": "P.808 · Subjective evaluation of speech quality with a crowdsourcing approach",
+    "by": "ITU-T",
+    "year": "2021",
+    "url": "https://www.itu.int/rec/T-REC-P.808/en",
+    "type": "Standard",
+    "note": "Use its listening-test design, listener qualification and environment controls to structure a study. Its speech-quality task has a different construct from literary performance or speaker consent.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-disparities",
+    "title": "Racial disparities in automated speech recognition",
+    "by": "Allison Koenecke and colleagues",
+    "year": "2020",
+    "url": "https://www.pnas.org/doi/10.1073/pnas.1915768117",
+    "type": "Paper",
+    "note": "The authors audited commercial recognition on US sociolinguistic interviews. Read cohort construction before interpreting disparities or extrapolating to other languages and communities.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-indicfdb",
+    "title": "IndicFDB · Benchmarking Full-Duplex Voice Agents across Indian Languages",
+    "by": "Rajarshi Roy and colleagues",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2609.31967",
+    "type": "Preprint",
+    "note": "Study the ten-language benchmark’s conversational event construction, synthetic interruptions, timing heuristics and translation-based judging. Translation and the selected conversations bound the conclusions.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-stats",
+    "title": "The Hitchhiker’s Guide to Testing Statistical Significance in Natural Language Processing",
+    "by": "Rotem Dror, Gili Baumer, Segev Shlomov and Roi Reichart",
+    "year": "2018",
+    "url": "https://aclanthology.org/P18-1128/",
+    "type": "Paper",
+    "note": "Work through the conditions each significance test assumes. Use the paper to motivate an explicit sampling unit and metric when comparing systems on the same data.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-judge",
+    "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+    "by": "Lianmin Zheng and colleagues",
+    "year": "2023",
+    "url": "https://arxiv.org/abs/2306.05685",
+    "type": "Paper",
+    "note": "Inspect position and verbosity biases and where model judges agreed with humans on text tasks. A speech rubric needs fresh validation with people who heard the audio.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-voicebench",
+    "title": "VoiceBench · Benchmarking LLM-Based Voice Assistants",
+    "by": "Yiming Chen and colleagues",
+    "year": "2024",
+    "url": "https://arxiv.org/abs/2410.17196",
+    "type": "Paper",
+    "note": "Read how controlled speaker, acoustic and content variations probe voice assistants. Its trials can motivate test fixtures, though an interactive listener may change behavior in response to the system.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-duplex",
+    "title": "Full-Duplex-Bench · A Benchmark to Evaluate Full-Duplex Spoken Dialogue Models on Turn-taking Capabilities",
+    "by": "Guan-Ting Lin and colleagues",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2503.04721",
+    "type": "Paper",
+    "note": "The paper separates pause handling, backchannels, turn transitions and interruption. Use these event families to label replay cases and compare those results with a live conversation.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-trace",
+    "title": "Traces",
+    "by": "OpenTelemetry",
+    "year": "living",
+    "url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+    "type": "Documentation",
+    "note": "Read the span and parent–child model before designing a voice trace. A boundary such as audio reaching a listener’s ear still requires its own instrumentation.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-canary",
+    "title": "Canarying Releases",
+    "by": "Google Site Reliability Workbook",
+    "year": "2018",
+    "url": "https://sre.google/workbook/canarying-releases/",
+    "type": "Book chapter",
+    "note": "Use its control-versus-canary method, exposure window and attribution discussion to design a rollback gate. Choose listener-facing indicators for speech workloads.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-monitor",
+    "title": "Monitoring Distributed Systems",
+    "by": "Rob Ewaschuk · Google SRE Book",
+    "year": "2016",
+    "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+    "type": "Book chapter",
+    "note": "Use latency, traffic, errors and saturation to structure a dashboard. Complement service metrics with playback, stale-audio and resume outcomes.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-orca",
+    "title": "Orca · A Distributed Serving System for Transformer-Based Generative Models",
+    "by": "Gyeong-In Yu and colleagues",
+    "year": "2022",
+    "url": "https://www.usenix.org/conference/osdi22/presentation/yu",
+    "type": "Paper",
+    "note": "Follow insertion and removal of sequences at generation iterations. Its comparisons are specific to the tested model, hardware and workload.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-paged",
+    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "by": "Woosuk Kwon and colleagues",
+    "year": "2023",
+    "url": "https://arxiv.org/abs/2309.06180",
+    "type": "Paper",
+    "note": "Trace how KV blocks reduce fragmentation under variable sequence lengths. The paper evaluates autoregressive language-model serving.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-flash",
+    "title": "FlashAttention · Fast and Memory-Efficient Exact Attention with IO-Awareness",
+    "by": "Tri Dao and colleagues",
+    "year": "2022",
+    "url": "https://papers.neurips.cc/paper_files/paper/2022/hash/67d57c32e20fd0a7a302cb81d36e40d5-Abstract-Conference.html",
+    "type": "Paper",
+    "note": "Its tiled computation illustrates the cost of moving data between GPU memory levels. Gains depend on workload shape and memory hierarchy.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-triton",
+    "title": "Batchers · Triton Inference Server",
+    "by": "NVIDIA",
+    "year": "living",
+    "url": "https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/user_guide/batcher.html",
+    "type": "Documentation",
+    "note": "Inspect dynamic queue delays and the sequence batcher for ordered, stateful requests. Trace the full client queue as well as the scheduler.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-smooth",
+    "title": "SmoothQuant · Accurate and Efficient Post-Training Quantization for Large Language Models",
+    "by": "Guangxuan Xiao and colleagues",
+    "year": "2022",
+    "url": "https://arxiv.org/abs/2211.10438",
+    "type": "Paper",
+    "note": "Track how rescaling addresses activation outliers for W8A8 transformer inference. Validate an ASR encoder or vocoder separately before borrowing that conclusion.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-whisper",
+    "title": "whisper.cpp",
+    "by": "ggml-org contributors",
+    "year": "living",
+    "url": "https://github.com/ggml-org/whisper.cpp",
+    "type": "Software",
+    "note": "See supported CPU and accelerator backends, quantized weights and the sample-file CLI. Benchmark a specific revision and model on the target device.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-capture",
+    "title": "Media Capture and Streams",
+    "by": "W3C WebRTC Working Group",
+    "year": "living",
+    "url": "https://www.w3.org/TR/mediacapture-streams/",
+    "type": "Standard",
+    "note": "Consult device-privacy indicators, capture permissions and track termination for a browser product. The specification concerns media access while a product also needs its own recording and retention state.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-gdpr",
+    "title": "Regulation (EU) 2016/679 · General Data Protection Regulation",
+    "by": "European Parliament and Council",
+    "year": "2016",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32016R0679",
+    "type": "Legislation",
+    "note": "Read Articles 4, 5, 9 and 17 for biometric identification, storage limitation, conditions and erasure exceptions. Determine applicability for the actual actors, jurisdictions and purposes.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-nist",
+    "title": "Digital Identity Guidelines · Authentication and Authenticator Management (SP 800-63B-4)",
+    "by": "NIST",
+    "year": "2025",
+    "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+    "type": "Standard",
+    "note": "Read §3.2.3 on biometric comparisons, presentation attacks and the voice restriction in this guideline. It addresses authentication assurance within its scope.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-spoof",
+    "title": "ASVspoof 5 evaluation plan · phase 2",
+    "by": "ASVspoof organizers",
+    "year": "2024",
+    "url": "https://www.asvspoof.org/file/ASVspoof5___Evaluation_Plan_Phase2.pdf",
+    "type": "Benchmark",
+    "note": "Examine the spoofing and spoofing-aware verification tasks, operating costs and evaluation protocol. Re-evaluate against new generators and replay channels.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-injection",
+    "title": "LLM01:2025 · Prompt Injection",
+    "by": "OWASP GenAI Security Project",
+    "year": "2025",
+    "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+    "type": "Guidance",
+    "note": "Study indirect instructions in retrieved or multimodal content. Use the threat model to define independent authorization at each tool boundary.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sy-slsa",
+    "title": "SLSA v1.2 · Provenance",
+    "by": "OpenSSF SLSA contributors",
+    "year": "v1.2",
+    "url": "https://slsa.dev/spec/v1.2/provenance",
+    "type": "Specification",
+    "note": "Use build and artifact identity to reconstruct which inputs produced a release. A provenance statement still requires verification against a trusted builder.",
+    "reviewed": "2026-11-07"
+  }
+]

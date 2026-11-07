@@ -1,0 +1,162 @@
+[
+  {
+    "id": "sp-hi-words",
+    "title": "Hindi word list · New Delhi",
+    "by": "UCLA Phonetics Lab Archive",
+    "year": "1974",
+    "url": "https://archive.phonetics.ucla.edu/Language/HIN/hin_word-list_1974_01.html",
+    "type": "Recording index",
+    "note": "Compare entries 3–6 and 23–24 to hear aspiration and place contrasts. A single speaker's word list illustrates a distinction; it cannot estimate population performance.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-prosody",
+    "title": "Tone and intonation",
+    "by": "Essentials of Linguistics, 2nd ed.",
+    "year": "Open textbook",
+    "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/3-12-tone-and-intonation/",
+    "type": "Textbook",
+    "note": "Distinguish pitch patterns that differentiate words from patterns that convey meaning across phrases. Intonation conventions vary.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-mucs",
+    "title": "MUCS 2021 · multilingual and code-switching ASR challenges",
+    "by": "Diwan and colleagues",
+    "year": "2021",
+    "url": "https://www.isca-archive.org/interspeech_2021/diwan21_interspeech.html",
+    "type": "Benchmark paper",
+    "note": "Includes separate multilingual and Hindi–English/Bengali–English code-switching tasks. Inspect the data and scoring policy before comparing systems.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-hmm",
+    "title": "A tutorial on hidden Markov models and selected applications in speech recognition",
+    "by": "Lawrence R. Rabiner",
+    "year": "1989",
+    "url": "https://www.fceia.unr.edu.ar/prodivoz/Rabiner_1989.pdf",
+    "type": "Paper",
+    "note": "Compare the forward sum, Viterbi maximum and parameter estimation. The factorization helps explain how pronunciation dictionaries and language models remained independently editable.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-stream",
+    "title": "Turning Whisper into real-time transcription system",
+    "by": "Macháček, Dabre & Bojar",
+    "year": "2023",
+    "url": "https://arxiv.org/abs/2307.14743",
+    "type": "Paper",
+    "note": "Read the local-agreement update and audio-buffer policy. Latency depends on the utterance, hardware and benchmark conditions.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-join",
+    "title": "Optimising selection of units from speech databases for concatenative synthesis",
+    "by": "Black & Campbell",
+    "year": "1995",
+    "url": "https://www.isca-archive.org/eurospeech_1995/black95b_eurospeech.html",
+    "type": "Paper",
+    "note": "Connect unit selection to competing target and splice costs. The approach needs recorded units that cover the requested context.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-parametric",
+    "title": "Speech parameter generation algorithm considering global variance for HMM-based speech synthesis",
+    "by": "Toda & Tokuda",
+    "year": "2005",
+    "url": "https://www.isca-archive.org/interspeech_2005/toda05b_interspeech.html",
+    "type": "Paper",
+    "note": "Use the authors' trajectory example to understand how smoothing can reduce variation and muffle speech.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-fastspeech",
+    "title": "FastSpeech 2",
+    "by": "Ren and colleagues",
+    "year": "2020",
+    "url": "https://arxiv.org/abs/2006.04558",
+    "type": "Paper",
+    "note": "Trace pitch, energy and duration through a variance adaptor. Editable intermediate values need calibration against listening outcomes.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-diffwave",
+    "title": "DiffWave",
+    "by": "Kong and colleagues",
+    "year": "2020",
+    "url": "https://arxiv.org/abs/2009.09761",
+    "type": "Paper",
+    "note": "A concrete waveform diffusion model that uses a sequence of denoising steps. Inspect the conditioning and step count when comparing latency.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-cloning",
+    "title": "Transfer learning from speaker verification to multispeaker text-to-speech synthesis",
+    "by": "Jia and colleagues",
+    "year": "2018",
+    "url": "https://arxiv.org/abs/1806.04558",
+    "type": "Paper",
+    "note": "Separates speaker encoder, synthesizer and vocoder. The example distinguishes conditioning on an embedding from training a new voice.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-audiolm",
+    "title": "AudioLM",
+    "by": "Borsos and colleagues",
+    "year": "2022",
+    "url": "https://arxiv.org/abs/2209.03143",
+    "type": "Paper",
+    "note": "Studies semantic and acoustic tokens with different time scales. Audio continuation differs from grounded question answering.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-reader-announce",
+    "title": "Our best, most affordable ElevenReader yet",
+    "by": "ElevenReader",
+    "year": "2026",
+    "url": "https://elevenreader.io/blog/best-pricing-more-value",
+    "type": "Product claim",
+    "note": "Confirms the monthly versus annual billing amounts and the free allowance. Use the current pricing page for entitlements.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-piper-cli",
+    "title": "Piper command-line interface",
+    "by": "Open Home Foundation Voice",
+    "year": "Project documentation",
+    "url": "https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/CLI.md",
+    "type": "Technical guide",
+    "note": "Verify the exact voice-download and WAV-render commands. The CLI loads the voice each run, so benchmark cold and warm configurations separately.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-specaug",
+    "title": "SpecAugment",
+    "by": "Park and colleagues",
+    "year": "2019",
+    "url": "https://arxiv.org/abs/1904.08779",
+    "type": "Paper",
+    "note": "Time and frequency masks perturb training features without a new transcript. Evaluate masking settings against real target speech.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-whisper-doc",
+    "title": "Whisper model and generation API · Transformers 4.46.3",
+    "by": "Hugging Face",
+    "year": "Versioned documentation",
+    "url": "https://huggingface.co/docs/transformers/v4.46.3/en/model_doc/whisper",
+    "type": "Technical guide",
+    "note": "Version-specific reference for language/task prompts, feature masks and conditional generation in the optional example.",
+    "reviewed": "2026-11-07"
+  },
+  {
+    "id": "sp-tiny-card",
+    "title": "Whisper tiny · multilingual model card",
+    "by": "OpenAI model repository",
+    "year": "Model card",
+    "url": "https://huggingface.co/openai/whisper-tiny",
+    "type": "Model card",
+    "note": "Use the multilingual tiny checkpoint for a resource-bounded illustration. Check the limitations and preserve its exact local snapshot hash.",
+    "reviewed": "2026-11-07"
+  }
+]
